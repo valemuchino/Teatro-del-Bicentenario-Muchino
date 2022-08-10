@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/img/nuevofavicon1.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Desafio Bootstrap</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../assets/img/logoteatroblanco.png" alt="Logo sitio" ></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Edificio</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="salaprincipal.html">Sala Principal</a></li>
+                      <li><a class="dropdown-item active" href="#">Sala Auditorium</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="salaPrincipal bg-dark">
+        <div class="row m-0 text-white">
+            <div class="col-md-6 text-start">
+                <h2>Sala Auditorium</h2>
+                <div class="alert alert-light">
+                    Un espacio para <strong>grandes</strong> obras.
+                </div>
+                <p>Con capacidad para 196 espectadores y un escenario de 88m2, la Sala Auditórium posee las mismas características que la Sala Principal. Con acceso independiente por la intersección de Avenidas España y Córdoba, la sala tiene estacionamiento, boletería y guardarropas, posee una excelente infraestructura y un equipamiento tecnológico de vanguardia que, junto a su excelente acústica, le permite presentar, en su escenario, obras y espectáculos de diversos géneros y características.</p>
+                <p>Es un espacio multiuso para diversas actividades culturales: seminarios, conferencias, congresos, clases magistrales, disertaciones, conciertos y obras teatrales.</p>
+                <p>Desde una mirada integral, el TB promueve el cruce de lenguajes como enriquecedores del arte.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="../assets/img/salaauditorium.jpg" style="width:500px;" class="mx-auto d-block rounded" alt="Sala principal del teatro">
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 text-center" class="footerLogo">
+            <a href="../index.html"><img src="../assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
+          </div>
+          <div class="col-md-4 text-center" class="redesSociales">
+            <h3><a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></h3>
+            <h3><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></h3>
+          </div>
+          <div class="col-md-4 text-center footerEnlaces">
+            <h3><a href="contacto.html">Contacto</a></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="copyright" class="col-md-12">
+            <p>Todos los derechos reservados 2022© / Valentino Muchino - CoderHouse</p>
+          </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
