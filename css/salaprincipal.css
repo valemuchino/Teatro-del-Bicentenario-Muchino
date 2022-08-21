@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-nav {
+nav, footer {
   height: 90px;
   background-image: linear-gradient(to right, #7f5539, #b08968);
 }
@@ -67,7 +67,7 @@ main.salaPrincipal p {
 }
 
 footer {
-  background-image: linear-gradient(to right, #7f5539, #b08968);
+  height: 160px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -99,7 +99,7 @@ footer p {
   margin-top: 20px;
   margin-bottom: 0;
   font-family: "PT Sans", sans-serif;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 2px black;
   color: white;
   text-align: center;
   -webkit-animation-duration: 3s;

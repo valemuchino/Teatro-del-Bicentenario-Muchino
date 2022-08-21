@@ -7,6 +7,21 @@ $colordeg2: #b08968;
 $colordeg3: #e6ccb2;
 $colordeg4: #ede0d4;
 
+$estiloparrafo: (
+    color: white,
+    fuente: $fontcuerpo,
+    tamaño: 18px,
+    sombra: 2px 2px 2px black,
+);
+
+@mixin degradez {
+    background-image: linear-gradient(to right, $colordeg1, $colordeg2);
+}
+
+@mixin degradez2 {
+    background-image: linear-gradient(to left, $colordeg4, $colordeg3);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +30,7 @@ $colordeg4: #ede0d4;
 
 nav {
     height: 90px;
-    background-image: linear-gradient(to right, #7f5539, #b08968);
+    @include degradez;
 }
 
 .nav-item {
@@ -42,13 +57,13 @@ main.salaPrincipal {
 
     h2 {
         font-family: $fonttitulo;
-        text-shadow: 2px 2px 2px black;
+        text-shadow: map-get($estiloparrafo, sombra);
     }
 
     p {
-        font-family: $fontcuerpo;
-        font-size: 18px;
-        text-shadow: 2px 2px 2px black;
+        font-family: map-get($estiloparrafo, fuente);
+        font-size: map-get($estiloparrafo, tamaño);
+        text-shadow: map-get($estiloparrafo, sombra);
     }
 }
 
@@ -63,29 +78,30 @@ main.salaPrincipal {
     padding: 2rem;
 
     .card-header {
-        background-image: linear-gradient(to right, $colordeg1, $colordeg2);
+        @include degradez;
         color: white;
         
         a {
             font-family: $fonttitulo;
-            color: white;
+            color: map-get($estiloparrafo, color);
             font-size: 1.4rem;
-            text-shadow: 2px 2px 2px black;
+            text-shadow: map-get($estiloparrafo, sombra);
         }
     }
 
     .card-body {
-        background-image: linear-gradient(to left, $colordeg4, $colordeg3);
+        @include degradez2;
 
         p {
-            font-family: $fontcuerpo;
+            font-family: map-get($estiloparrafo, fuente);
             text-shadow: none;
         }
     }
 }
 
 footer {
-    background-image: linear-gradient(to right, $colordeg1, $colordeg2);
+    @extend nav;
+    height: 160px;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
@@ -122,9 +138,9 @@ footer {
     p {
         margin-top: 20px;
         margin-bottom: 0;
-        font-family: $fontcuerpo;
-        text-shadow: 1px 1px 3px black;
-        color: white;
+        font-family: map-get($estiloparrafo, fuente);
+        text-shadow: map-get($estiloparrafo, sombra);
+        color: map-get($estiloparrafo, color);
         text-align: center;
         animation-duration: 3s;
         animation-name: copyright;
