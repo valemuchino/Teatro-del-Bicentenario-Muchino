@@ -17,6 +17,9 @@ nav, footer {
 .nav-item .dropdown-menu a {
   font-size: 1rem;
 }
+.nav-item .dropdown-menu a:focus {
+  background-color: #b08968;
+}
 .nav-item .dropdown-menu .active {
   background-color: #7f5539;
 }

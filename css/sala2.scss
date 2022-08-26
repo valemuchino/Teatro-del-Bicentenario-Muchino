@@ -42,6 +42,10 @@ nav {
     .dropdown-menu {
         a {
             font-size: 1rem;
+
+            &:focus {
+                background-color: $colordeg2;
+            }
         }
         .active {
             background-color: $colordeg1;
