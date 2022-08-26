@@ -23,8 +23,6 @@ nav {
 }
 
 .visitaGuiada {
-    border-top: 5px solid #ffcc00;
-    border-bottom: 5px solid #ffcc00;
     background-image: url(../assets/img/fotoentrada.jpg);
     background-size: cover;
     background-position: center;
@@ -32,7 +30,7 @@ nav {
 
 .mt-4 {
     margin-top: 0px !important;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 

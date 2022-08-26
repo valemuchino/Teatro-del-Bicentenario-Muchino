@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@600&display=swap');
+
+$fontcuerpo: 'PT Sans', sans-serif;
+$fonttitulo: 'Poppins', sans-serif;
+$colordeg1: #7f5539;
+$colordeg2: #b08968;
+$colordeg3: #e6ccb2;
+$colordeg4: #ede0d4;
+
+$estiloparrafo: (
+    color: white,
+    fuente: $fontcuerpo,
+    tamaño: 18px,
+    sombra: 2px 2px 2px black,
+);
+
+@mixin degradez {
+    background-image: linear-gradient(to right, $colordeg1, $colordeg2);
+}
+
+@mixin degradez2 {
+    background-image: linear-gradient(to left, $colordeg4, $colordeg3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 90px;
+    @include degradez;
+}
+
+.nav-item {
+    a {
+        font-size: 1.3rem;
+        font-family: $fonttitulo;
+    }
+
+    .dropdown-menu {
+        a {
+            font-size: 1rem;
+
+            &:focus {
+                background-color: $colordeg2;
+            }
+        }
+        .active {
+            background-color: $colordeg1;
+        }
+    }
+}
+
+.imgCarrusel {
+    width: 100%;
+    height: 677px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    h3 {
+        font-family: $fonttitulo;
+        font-family: map-get($estiloparrafo, sombra);
+    }
+
+    p {
+        font-family: map-get($estiloparrafo, fuente);
+        font-family: map-get($estiloparrafo, sombra);
+    }
+}
+
+.visitaGuiada {
+    background-image: url(../assets/img/fotoentrada.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .fondo {
+        margin-top: 0px;
+        background-color: rgba(255, 255, 255, 0.85);
+
+        h1 {
+            font-family: $fonttitulo;
+        }
+
+        p {
+            font-family: map-get($estiloparrafo, fuente);
+            font-size: map-get($estiloparrafo, tamaño);
+        }
+
+        a {
+            font-family: $fonttitulo;
+        }
+    }
+}
+
+.novedades {
+    @include degradez2;
+
+    h2 {
+        margin: 0;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: $fonttitulo;
+        font-family: map-get($estiloparrafo, sombra);
+    }
+
+    a {
+        font-family: $fonttitulo;
+    }
+}
+
+.card-body {
+    .card-title {
+        font-family: $fonttitulo;
+    }
+
+    .card-text {
+        font-family: $fontcuerpo;
+    }
+
+    a {
+        font-family: $fonttitulo;
+    }
+}
+
+
+footer {
+    @extend nav;
+    height: 160px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .footerEnlaces {
+        a {
+            font-size: 22px;
+            color: white;
+            font-family: $fonttitulo;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black;
+
+            &:hover {
+                color: black;
+                transition: 0.5s;
+                font-size: 25px;
+                text-shadow: none;
+            }
+        }
+    }
+
+    i {
+        font-size: 30px;
+        color: white;
+        text-shadow: 1px 1px 3px black;
+
+        &:hover {
+            transition: 0.5s;
+            font-size: 36px;
+            color: black;
+            text-shadow: none;
+        } 
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-family: map-get($estiloparrafo, fuente);
+        text-shadow: map-get($estiloparrafo, sombra);
+        color: map-get($estiloparrafo, color);
+        text-align: center;
+        animation-duration: 3s;
+        animation-name: copyright;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes copyright {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
