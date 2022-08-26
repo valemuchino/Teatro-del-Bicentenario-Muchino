@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav, footer {
+  height: 90px;
+  background-image: linear-gradient(to right, #7f5539, #b08968);
+}
+
+.nav-item a {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+}
+.nav-item .dropdown-menu a {
+  font-size: 1rem;
+}
+.nav-item .dropdown-menu a:focus {
+  background-color: #b08968;
+}
+.nav-item .dropdown-menu .active {
+  background-color: #7f5539;
+}
+
+main.novedades {
+  margin-top: 5rem;
+  padding: 3rem;
+  background-color: rgb(41, 41, 41);
+}
+main.novedades h2 {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 2px black;
+}
+main.novedades p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.galeriaDeFotos {
+  grid-area: fotos;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "img1 img1 img1 img1" "img1 img1 img1 img1" "img3 img4 img4 img2" "img3 img5 img5 img6" "img3 img5 img5 img6";
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  grid-gap: 1rem;
+  height: 900px;
+}
+
+.item1 {
+  grid-area: img1;
+  background-image: url(../assets/img/b1.jpeg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.item2 {
+  grid-area: img2;
+  background-image: url(../assets/img/b2.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.item3 {
+  grid-area: img3;
+  background-image: url(../assets/img/b3.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.item4 {
+  grid-area: img4;
+  background-image: url(../assets/img/b4.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.item5 {
+  grid-area: img5;
+  background-image: url(../assets/img/b5.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.item6 {
+  grid-area: img6;
+  background-image: url(../assets/img/b6.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.page-item.disabled .page-link {
+  background-color: rgb(177, 177, 177);
+}
+
+.page-item.active .page-link {
+  background-color: black;
+  border-color: white;
+}
+
+.page-link {
+  color: white;
+  background-color: #7f5539;
+}
+.page-link:hover {
+  background-color: #b08968;
+  color: white;
+  font-size: 18px;
+  transition: 0.4s;
+}
+.page-link:focus {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  height: 160px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+footer .footerEnlaces a {
+  font-size: 22px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+}
+footer .footerEnlaces a:hover {
+  color: black;
+  transition: 0.5s;
+  font-size: 25px;
+  text-shadow: none;
+}
+footer i {
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+footer i:hover {
+  transition: 0.5s;
+  font-size: 36px;
+  color: black;
+  text-shadow: none;
+}
+footer p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: "PT Sans", sans-serif;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  text-align: center;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: copyright;
+          animation-name: copyright;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes copyright {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes copyright {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=galeria.css.map */

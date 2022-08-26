@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@600&display=swap');
+
+$fontcuerpo: 'PT Sans', sans-serif;
+$fonttitulo: 'Poppins', sans-serif;
+$colordeg1: #7f5539;
+$colordeg2: #b08968;
+$colordeg3: #e6ccb2;
+$colordeg4: #ede0d4;
+
+$estiloparrafo: (
+    color: white,
+    fuente: $fontcuerpo,
+    tamaño: 18px,
+    sombra: 2px 2px 2px black,
+);
+
+@mixin degradez {
+    background-image: linear-gradient(to right, $colordeg1, $colordeg2);
+}
+
+@mixin degradez2 {
+    background-image: linear-gradient(to left, $colordeg4, $colordeg3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 90px;
+    @include degradez;
+}
+
+.nav-item {
+    a {
+        font-size: 1.3rem;
+        font-family: $fonttitulo;
+    }
+
+    .dropdown-menu {
+        a {
+            font-size: 1rem;
+
+            &:focus {
+                background-color: $colordeg2;
+            }
+        }
+        .active {
+            background-color: $colordeg1;
+        }
+    }
+}
+
+main.novedades {
+    margin-top: 5rem;
+    padding: 3rem;
+    background-color: rgb(41, 41, 41);
+
+    h2 {
+        font-family: $fonttitulo;
+        text-shadow: map-get($estiloparrafo, sombra);
+    }
+
+    p {
+        font-family: map-get($estiloparrafo, fuente);
+        font-size: map-get($estiloparrafo, tamaño);
+        text-shadow: map-get($estiloparrafo, sombra);
+    }
+}
+
+.galeriaDeFotos {
+    grid-area: fotos;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "img1 img1 img1 img1"
+        "img1 img1 img1 img1"
+        "img3 img4 img4 img2"
+        "img3 img5 img5 img6"
+        "img3 img5 img5 img6";
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    grid-gap: 1rem;
+    height: 900px;
+}
+
+.item1 {
+    grid-area: img1;
+    background-image: url(../assets/img/b1.jpeg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item2 {
+    grid-area: img2;
+    background-image: url(../assets/img/b2.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item3 {
+    grid-area: img3;
+    background-image: url(../assets/img/b3.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item4 {
+    grid-area: img4;
+    background-image: url(../assets/img/b4.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item5 {
+    grid-area: img5;
+    background-image: url(../assets/img/b5.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item6 {
+    grid-area: img6;
+    background-image: url(../assets/img/b6.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.page-item.disabled {
+    .page-link {
+        background-color: rgb(177, 177, 177);
+    }
+}
+
+.page-item.active {
+    .page-link {
+        background-color: black;
+        border-color: white;
+    }
+}
+
+.page-link {
+    color: white;
+    background-color: $colordeg1;
+
+    &:hover {
+        background-color: $colordeg2;
+        color: white;
+        font-size: 18px;
+        transition: 0.4s;
+    }
+
+    &:focus {
+        background-color: black;
+        color: white;
+    }
+}
+
+footer {
+    @extend nav;
+    height: 160px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .footerEnlaces {
+        a {
+            font-size: 22px;
+            color: white;
+            font-family: $fonttitulo;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black;
+
+            &:hover {
+                color: black;
+                transition: 0.5s;
+                font-size: 25px;
+                text-shadow: none;
+            }
+        }
+    }
+
+    i {
+        font-size: 30px;
+        color: white;
+        text-shadow: 1px 1px 3px black;
+
+        &:hover {
+            transition: 0.5s;
+            font-size: 36px;
+            color: black;
+            text-shadow: none;
+        } 
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-family: map-get($estiloparrafo, fuente);
+        text-shadow: map-get($estiloparrafo, sombra);
+        color: map-get($estiloparrafo, color);
+        text-align: center;
+        animation-duration: 3s;
+        animation-name: copyright;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes copyright {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
