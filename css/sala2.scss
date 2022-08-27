@@ -29,7 +29,6 @@ $estiloparrafo: (
 }
 
 nav {
-    height: 90px;
     @include degradez;
 }
 
@@ -55,7 +54,7 @@ nav {
 
 main.salaPrincipal {
     margin-top: 5rem;
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: rgb(41, 41, 41);
 
     h2 {
@@ -72,16 +71,19 @@ main.salaPrincipal {
 
 .imgCarrusel {
     width: 100%;
-    height: 540px;
+    height: 200px;
     object-fit: cover;
     object-position: center;
 }
 
 footer {
     @extend nav;
-    height: 160px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    .logoSitio {
+        margin-bottom: 10px;
+    }
 
     .footerEnlaces {
         a {
@@ -135,5 +137,17 @@ footer {
         100% {
             opacity: 0;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .imgCarrusel {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imgCarrusel {
+        height: 500px;
     }
 }
