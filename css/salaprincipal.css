@@ -72,6 +72,9 @@ footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+footer .logoSitio {
+  margin-bottom: 10px;
+}
 footer .footerEnlaces a {
   font-size: 22px;
   color: white;

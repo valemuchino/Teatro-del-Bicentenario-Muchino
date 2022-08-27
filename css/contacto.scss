@@ -29,7 +29,6 @@ $estiloparrafo: (
 }
 
 nav {
-    height: 90px;
     @include degradez;
 }
 
@@ -55,7 +54,7 @@ nav {
 
 main.mainContacto {
     margin-top: 5rem;
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: rgb(41, 41, 41);
 
     h2 {
@@ -72,9 +71,12 @@ main.mainContacto {
 
 footer {
     @extend nav;
-    height: 160px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    .logoSitio {
+        margin-bottom: 10px;
+    }
 
     .footerEnlaces {
         a {
