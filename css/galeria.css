@@ -6,7 +6,6 @@
 }
 
 nav, footer {
-  height: 90px;
   background-image: linear-gradient(to right, #7f5539, #b08968);
 }
 
@@ -26,7 +25,7 @@ nav, footer {
 
 main.novedades {
   margin-top: 5rem;
-  padding: 3rem;
+  padding: 1.5rem;
   background-color: rgb(41, 41, 41);
 }
 main.novedades h2 {
@@ -42,15 +41,15 @@ main.novedades p {
 .galeriaDeFotos {
   grid-area: fotos;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "img1 img1 img1 img1" "img1 img1 img1 img1" "img3 img4 img4 img2" "img3 img5 img5 img6" "img3 img5 img5 img6";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6";
   overflow: hidden;
   justify-content: center;
   align-content: center;
-  padding: 1rem;
+  padding: 0rem;
   grid-gap: 1rem;
-  height: 900px;
+  height: 1200px;
 }
 
 .item1 {
@@ -132,9 +131,11 @@ main.novedades p {
 }
 
 footer {
-  height: 160px;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+footer .logoSitio {
+  margin-bottom: 10px;
 }
 footer .footerEnlaces a {
   font-size: 22px;
@@ -194,5 +195,36 @@ footer p {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .galeriaDeFotos {
+    grid-area: fotos;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "img1 img1 img1" "img2 img2 img3" "img4 img4 img3" "img5 img5 img5" "img6 img6 img6";
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    grid-gap: 1rem;
+    height: 1400px;
+  }
+}
+@media (min-width: 1024px) {
+  .galeriaDeFotos {
+    grid-area: fotos;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "img1 img1 img1 img1" "img1 img1 img1 img1" "img3 img4 img4 img2" "img3 img5 img5 img5" "img3 img6 img6 img6";
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    grid-gap: 1rem;
+    height: 1600px;
   }
 }/*# sourceMappingURL=galeria.css.map */
