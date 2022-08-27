@@ -6,7 +6,6 @@
 }
 
 nav, footer {
-  height: 90px;
   background-image: linear-gradient(to right, #7f5539, #b08968);
 }
 
@@ -26,7 +25,7 @@ nav, footer {
 
 main.salaPrincipal {
   margin-top: 5rem;
-  padding: 3rem;
+  padding: 1.5rem;
   background-color: rgb(41, 41, 41);
 }
 main.salaPrincipal h2 {
@@ -41,7 +40,7 @@ main.salaPrincipal p {
 
 .imgCarrusel {
   width: 100%;
-  height: 540px;
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -49,7 +48,7 @@ main.salaPrincipal p {
 }
 
 .acordionSalaPrincipal {
-  padding: 2rem;
+  padding: 1rem;
 }
 .acordionSalaPrincipal .card-header {
   background-image: linear-gradient(to right, #7f5539, #b08968);
@@ -70,7 +69,6 @@ main.salaPrincipal p {
 }
 
 footer {
-  height: 160px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -132,5 +130,16 @@ footer p {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .imgCarrusel {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .imgCarrusel {
+    height: 500px;
   }
 }/*# sourceMappingURL=salaprincipal.css.map */
